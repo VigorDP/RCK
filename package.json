@@ -1,15 +1,16 @@
 {
   "name": "rck",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "React UI Component Kit",
-  "main": "lib/rck.js",
-  "module": "es/rck.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
   "scripts": {
-    "build-cjs": "rimraf dist && cross-env NODE_ENV=development TARGET=commonjs2 webpack --config config/webpack.config.js",
-    "build-umd": "rimraf dist && cross-env NODE_ENV=development TARGET=umd webpack --config config/webpack.config.js",
-    "build-es": "rimraf dist && cross-env NODE_ENV=production TARGET=es webpack --config config/webpack.config.js",
+    "build-umd": "rimraf dist && cross-env NODE_ENV=development TARGET=commonjs2 webpack --config config/webpack.config.js",
+    "build-es": "cp -R src publish/es",
+    "build-cjs": "cp -R src publish/lib && gulp build-cjs",
+    "clean": "rimraf publish",
+    "build": "npm run clean && mkdir publish && npm run build-es && npm run build-cjs",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.config.js --open",
-    "test": "cross-env NODE_ENV=test webpack-dev-server --config config/webpack.config.js --open",
     "precommit": "lint-staged"
   },
   "lint-staged": {
@@ -68,6 +69,10 @@
     "webpack": "4.16.3",
     "webpack-bundle-analyzer": "3.0.3",
     "webpack-cli": "3.1.0",
-    "webpack-dev-server": "3.1.5"
+    "webpack-dev-server": "3.1.5",
+    "gulp": "4.0.0",
+    "gulp-autoprefixer": "6.0.0",
+    "gulp-babel": "8.0.0",
+    "gulp-sass": "4.0.2"
   }
 }
