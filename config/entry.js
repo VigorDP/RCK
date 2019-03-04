@@ -1,3 +1,4 @@
 module.exports = {
-  app: './src/index.js'
+  // rck: './src/index.js',
+  app: './src/doc/index.js'
 };

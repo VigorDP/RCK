@@ -1,4 +1,4 @@
 {
-  "presets": ["@babel/preset-env", "@babel/preset-react"],
-  "plugins": ["@babel/plugin-transform-runtime"] // 转换 rest 和 spread operator  runtime转异步函数
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+  // "plugins": ["@babel/plugin-transform-runtime"] // 转换 rest 和 spread operator  runtime转异步函数
 }

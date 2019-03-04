@@ -11,7 +11,7 @@ const plugins = [
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) // 定义客户端代码中的全局变量
   }),
   new WebPlugin({
-    template: resolve('doc/index.html'),
+    template: resolve('src/doc/index.html'),
     filename: resolve('dist/index.html'),
     requires: ['app']
   }),
