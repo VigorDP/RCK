@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-
+import './index.scss';
 class Test extends Component {
   // state = { test:1 }
   render() {
-    return <div>{'test'}</div>;
+    return <div className="test">{'test'}</div>;
   }
 }
 
