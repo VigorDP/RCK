@@ -1,6 +1,6 @@
 {
   "name": "rck",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "React UI Component Kit",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -9,7 +9,8 @@
     "build-es": "cp -R src publish/es",
     "build-cjs": "cp -R src publish/lib && gulp build-cjs",
     "clean": "rimraf publish",
-    "build": "npm run clean && mkdir publish && npm run build-es && npm run build-cjs",
+    "build": "npm run clean && mkdir publish && npm run build-es && npm run build-cjs && gulp generate-extra-file",
+    "publish": "cd publish && npm publish",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.config.js --open",
     "precommit": "lint-staged"
   },

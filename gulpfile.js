@@ -7,6 +7,10 @@ let gulp = require('gulp'),
   gulpSass = require('gulp-sass'),
   gulpAutoprefixer = require('gulp-autoprefixer');
 
+const fs = require('fs');
+const path = require('path');
+const pkg = require('./package.json');
+
 gulp.task('compile-es', function() {
   return gulp
     .src(['src/**/*.js'])
@@ -41,6 +45,21 @@ gulp.task('compile-scss', function() {
     )
     .pipe(gulpAutoprefixer())
     .pipe(gulp.dest('publish/lib'));
+});
+
+gulp.task('generate-extra-file', function(cb) {
+  delete pkg.devDependencies;
+  delete pkg.scripts;
+  delete pkg['lint-staged'];
+
+  fs.writeFileSync(
+    path.resolve(__dirname, './publish/package.json'),
+    JSON.stringify(pkg, null, 2)
+  );
+
+  fs.copyFileSync('./LICENSE', './publish/LICENSE');
+  fs.copyFileSync('./README.md', './publish/README.md');
+  cb();
 });
 
 gulp.task('build-cjs', gulp.series(['compile-scss', 'compile-es']));
