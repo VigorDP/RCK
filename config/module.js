@@ -1,5 +1,5 @@
 const resolve = require('path').resolve;
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   rules: [
@@ -19,22 +19,27 @@ module.exports = {
     },
     {
       test: /\.scss$/,
-      use: [
-        {
-          loader: 'css-loader'
+      use: ExtractTextPlugin.extract({
+        fallback: {
+          loader: 'style-loader'
         },
-        {
-          loader: 'postcss-loader',
-          options: {
-            plugins: [
-              require('autoprefixer')({
-                browsers: ['> 1%', 'last 2 versions']
-              })
-            ]
-          }
-        },
-        'sass-loader'
-      ],
+        use: [
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                require('autoprefixer')({
+                  browsers: ['> 1%', 'last 2 versions']
+                })
+              ]
+            }
+          },
+          'sass-loader'
+        ]
+      }),
       include: [resolve('src')]
     },
     {
