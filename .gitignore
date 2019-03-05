@@ -1,5 +1,6 @@
 build
 dist
+publish
 lib-cov
 coverage.html
 .DS_Store
