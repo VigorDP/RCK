@@ -14,7 +14,8 @@
     "dev": "gulp compile-scss && npm run storybook",
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "build-storybook": "build-storybook -c .storybook -o www"
+    "build-storybook": "build-storybook -c .storybook -o www",
+    "deploy-storybook": "storybook-to-ghpages --out=www"
   },
   "lint-staged": {
     "*.{js,jsx,json}": [
@@ -50,6 +51,7 @@
     "@babel/preset-env": "7.3.4",
     "@babel/preset-react": "7.0.0",
     "@storybook/react": "^5.1.0-alpha.4",
+    "@storybook/storybook-deployer": "^2.8.1",
     "autoprefixer": "9.4.9",
     "babel-eslint": "10.0.1",
     "babel-loader": "8.0.5",
