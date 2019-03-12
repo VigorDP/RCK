@@ -1,3 +1,3 @@
-import './styles/normalize.scss';
+import './styles/normalize.css';
 
 export { default as Test } from './Test';
