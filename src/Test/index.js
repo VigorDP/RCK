@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.css';
+import './index.scss';
 class Test extends Component {
   render() {
     return <div className="test">{this.props.title}</div>;

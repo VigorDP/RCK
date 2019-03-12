@@ -1,20 +1,20 @@
 {
   "name": "rck",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "React UI Component Kit",
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
-    "build-umd": "cross-env NODE_ENV=production  webpack --config config/webpack.config.js",
-    "build-es": "cp -R src publish/es",
-    "build-cjs": "cp -R src publish/lib && gulp build-cjs",
+    "build-umd": "webpack",
+    "build-es": "gulp copy-to-es",
+    "build-cjs": "gulp build-cjs",
     "clean": "rimraf publish",
     "build": "npm run clean && mkdir publish && npm run build-umd && npm run build-es && npm run build-cjs && gulp generate-extra-file",
     "publish": "cd publish && npm publish",
     "dev": "gulp compile-scss && npm run storybook",
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "build-storybook": "build-storybook -c .storybook -o .out"
+    "build-storybook": "build-storybook -c .storybook -o www"
   },
   "lint-staged": {
     "*.{js,jsx,json}": [
@@ -42,19 +42,14 @@
   "homepage": "https://github.com/fengyinchao/RCK#readme",
   "dependencies": {
     "react": "16.4.1",
-    "react-dom": "16.4.1",
-    "styled-components": "^4.1.3"
+    "react-dom": "16.4.1"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",
     "@babel/plugin-transform-runtime": "7.3.4",
     "@babel/preset-env": "7.3.4",
     "@babel/preset-react": "7.0.0",
-    "@storybook/addon-actions": "^5.0.1",
-    "@storybook/addon-links": "^5.0.1",
-    "@storybook/addon-notes": "^5.0.1",
-    "@storybook/addons": "^5.0.1",
-    "@storybook/react": "^5.0.1",
+    "@storybook/react": "^5.1.0-alpha.4",
     "autoprefixer": "9.4.9",
     "babel-eslint": "10.0.1",
     "babel-loader": "8.0.5",
@@ -76,7 +71,6 @@
     "prettier": "1.16.3",
     "rimraf": "2.6.3",
     "sass-loader": "7.1.0",
-    "storybook-addon-props": "^3.0.4",
     "storybook-readme": "^4.0.5",
     "style-loader": "0.23.1",
     "url-loader": "1.1.2",
