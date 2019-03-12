@@ -15,7 +15,7 @@
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -c .storybook -o www",
-    "deploy-storybook": "storybook-to-ghpages --out=www"
+    "deploy-storybook": "npm run build-storybook && storybook-to-ghpages --out=www"
   },
   "lint-staged": {
     "*.{js,jsx,json}": [
