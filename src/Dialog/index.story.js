@@ -4,7 +4,7 @@ import { withDocs } from 'storybook-readme';
 import Readme from './README.md';
 import { Dialog } from './index';
 
-const DialogDemo = (
+const Demo = (
   <Dialog
     title={'Dialog'}
     onClose={() => {}}
@@ -24,4 +24,4 @@ const DialogDemo = (
 
 storiesOf('组件列表|Dialog', module)
   .addDecorator(withDocs(Readme))
-  .add('Readme', () => <div style={{ width: 400 }}>{DialogDemo}</div>);
+  .add('Readme', () => <div style={{ width: 400 }}>{Demo}</div>);
