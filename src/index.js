@@ -1,3 +1,4 @@
 import './styles/normalize.scss';
 
-export { default as Test } from './Test';
+export { Button, ButtonGroup } from './Button';
+export { Toast } from './Toast';
