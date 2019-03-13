@@ -11,21 +11,7 @@ import Readme from './README.md';\n
 import { Dialog } from './index';\n
 
 const Demo = (\n
-  <Dialog\n
-    title={'Dialog'}\n
-    onClose={() => {}}\n
-    visible\n
-    footer={[\n
-      <button type='button' className='btn btn-default' key='close'>\n
-        Close\n
-      </button>,\n
-      <button type='button' className='btn btn-primary' key='save'>\n
-        Save changes\n
-      </button>\n
-    ]}\n
-  >\n
-    <p>first dialog</p>\n
-  </Dialog>\n
+  <Dialog></Dialog>\n
 );\n
 
 storiesOf('组件列表|Dialog', module)\n
