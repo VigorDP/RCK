@@ -1,2 +1,2 @@
 ### 简介
-使用的是 [rc-dialog](https://github.com/react-component/dialog)
+使用的是 [rc-menu](https://github.com/react-component/menu)

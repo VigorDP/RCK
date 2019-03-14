@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 创建组件目录，包含三个文件 "index.js index.story.js README.md index.scss"
-rootDir=$(pwd)
+readonly rootDir=$(pwd)
 
 indexTpl="import Dialog from 'rc-dialog';\nimport 'rc-dialog/assets/index.css';\nexport { Dialog };"
 indexStoryTpl="import React from 'react';\n
@@ -20,6 +20,7 @@ storiesOf('组件列表|Dialog', module)\n
 "
 readmeTpl="### 简介\n使用的是 [rc-menu](https://github.com/react-component/menu)\n### API\n"
 scssTpl="@import '../styles/themes/variables.scss';"
+
 set -e
 read -p "Input Component Dirctory Name: " name
 dir="$rootDir/src/$name"

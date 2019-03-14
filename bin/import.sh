@@ -17,6 +17,7 @@ file=$(find ./src -name '*.js' ! -name '*.story.js');
 for loop in $file
 do
   if [[ $(dirname $loop) != './src' ]];then
+    # sed -i "" "1d" $loop
     tem=${loop%\/*}
     dir=${tem##*\/}
     right=" from './$dir';"
