@@ -58,6 +58,7 @@ gulp.task('compile-scss', function() {
 gulp.task('generate-extra-file', function(cb) {
   delete pkg.devDependencies;
   delete pkg.scripts;
+  delete pkg.bin;
   delete pkg['lint-staged'];
 
   fs.writeFileSync(
