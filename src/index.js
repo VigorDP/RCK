@@ -1,16 +1,45 @@
 import './styles/normalize.scss';
 
-export { QueueAnim } from './QueueAnimate';
-export { Animate } from './Animate';
-export { Formik, Form, Field, ErrorMessage, Yup } from './Form';
-export { ToolTip } from './ToolTip';
-export { Toast } from './Toast';
-export { Steps, Step } from './Step';
-export { Tab, Tabs, TabList, TabPanel } from './Tab';
-export { Carousel } from './Carousel';
-export { Dialog } from './Dialog';
-export { Button, ButtonGroup, ButtonToolbar } from './Button';
-export { TextyAnim } from './TextAnim';
-export { Menu, SubMenu, MenuItem, Divider } from './Menu';
-export { UserAvatar } from './Avatar';
-export { Upload } from './Upload';
+import { QueueAnim } from './QueueAnimate';
+import { Animate } from './Animate';
+import { Formik, Form, Field, ErrorMessage, Yup } from './Form';
+import { ToolTip } from './ToolTip';
+import { Toast } from './Toast';
+import { Steps, Step } from './Step';
+import { Tab, Tabs, TabList, TabPanel } from './Tab';
+import { Carousel } from './Carousel';
+import { Dialog } from './Dialog';
+import { Button, ButtonGroup, ButtonToolbar } from './Button';
+import { TextyAnim } from './TextAnim';
+import { Menu, SubMenu, MenuItem, Divider } from './Menu';
+import { UserAvatar } from './Avatar';
+import { Upload } from './Upload';
+export {
+  QueueAnim,
+  Animate,
+  Formik,
+  Form,
+  Field,
+  ErrorMessage,
+  Yup,
+  ToolTip,
+  Toast,
+  Steps,
+  Step,
+  Tab,
+  Tabs,
+  TabList,
+  TabPanel,
+  Carousel,
+  Dialog,
+  Button,
+  ButtonGroup,
+  ButtonToolbar,
+  TextyAnim,
+  Menu,
+  SubMenu,
+  MenuItem,
+  Divider,
+  UserAvatar,
+  Upload
+};
