@@ -59,6 +59,7 @@
     "rc-texty": "^0.2.0",
     "rc-upload": "^2.6.3",
     "react": "^16.8.4",
+    "react-content-loader": "^4.2.1",
     "react-dom": "16.4.1",
     "react-tabs": "^3.0.0",
     "react-user-avatar": "^1.10.0",
